@@ -115,7 +115,7 @@ const Login = () => {
         variant="outline"
         bg={"black"}
         colorScheme={"white"}
-        color="#000"
+        color="#fff"
         width="100%"
         style={{ marginTop: "10px" }}
         onClick={() => {
