@@ -71,6 +71,7 @@ const Register = () => {
     // ? request
     try {
       const config = {
+        baseURL:"https://chathub.imranalikm.online",
         headers: {
           "Content-type": "application/json",
         },

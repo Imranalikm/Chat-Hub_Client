@@ -48,6 +48,7 @@ const UpdateGroupChatModal = ({
     }
     try {
       const config = {
+        baseURL:"https://chathub.imranalikm.online",
         headers: {
           "Content-type": "application/json",
           Authorization: `Bearer ${user.token}`,

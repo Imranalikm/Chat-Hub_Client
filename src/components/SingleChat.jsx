@@ -36,6 +36,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     try {
       setLoading(true);
       const config = {
+        baseURL:"https://chathub.imranalikm.online",
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

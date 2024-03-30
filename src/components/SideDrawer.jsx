@@ -56,6 +56,7 @@ const SideDrawer = () => {
     setLoading(true);
     try {
       const config = {
+        baseURL:"https://chathub.imranalikm.online",
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -74,6 +75,7 @@ const SideDrawer = () => {
     setLoadingChat(true);
     try {
       const config = {
+        baseURL:"https://chathub.imranalikm.online",
         headers: {
           "Content-type": "application/json",
           Authorization: `Bearer ${user.token}`,
@@ -96,6 +98,7 @@ const SideDrawer = () => {
   const removeNotification = async (id) => {
     try {
       const config = {
+        baseURL:"https://chathub.imranalikm.online",
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
