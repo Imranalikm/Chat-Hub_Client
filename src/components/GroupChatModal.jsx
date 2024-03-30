@@ -71,7 +71,7 @@ const GroupChatModal = ({ children }) => {
     }
     if (
       selectedUser.map((u) => {
-        if (u.email === "guest@deLink.com") {
+        if (u.email === "imranalikm@gmail.com") {
           toast.info("Guest user can not be added in group");
         }
         return {};
