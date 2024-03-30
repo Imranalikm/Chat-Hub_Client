@@ -96,18 +96,24 @@ const Login = () => {
         </InputGroup>
       </FormControl>
       <Button
-        bg={"#1d1931"}
-        colorScheme={"#1d1931"}
-        color="#fff"
-        width="100%"
-        style={{ marginTop: "40px" }}
-        onClick={handleSubmit}
-      >
-        Login
-      </Button>
+  style={{
+    background: "hsla(33, 100%, 53%, 1)",
+    backgroundImage: "linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%)",
+    background: "-moz-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%)",
+    background: "-webkit-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%)",
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF930F', endColorstr='#FFF95B', GradientType=1)",
+    color: "#fff",
+    width: "100%",
+    marginTop: "40px"
+  }}
+  onClick={handleSubmit}
+>
+  Login
+</Button>
+
       <Button
         variant="outline"
-        bg={"#fff"}
+        bg={"black"}
         colorScheme={"white"}
         color="#000"
         width="100%"
@@ -120,7 +126,7 @@ const Login = () => {
         }}
         isLoading={loading}
       >
-        Guest login
+        Demo login
       </Button>
     </VStack>
   );
