@@ -15,6 +15,7 @@ const MyChats = ({ fetchAgain }) => {
   const fetchChats = async () => {
     try {
       const config = {
+        baseURL:"https://chathub.imranalikm.online"
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
