@@ -83,49 +83,38 @@ const MyChats = ({ fetchAgain }) => {
         overflowY="hidden"
       >
         {chats ? (
-          <Stack overflowY="scroll">
-            {chats.map((chat, index) => (
-              <div key={index}>
-                <Box
-                  onClick={() => setSelectedChat(chat)}
-                  cursor="pointer"
-                  bg={selectedChat === chat ? "#1d1931" : "e8e8e8"}
-                  color={selectedChat === chat ? "#fff" : "#000"}
-                  px="3"
-                  py="2"
-                  borderRadius="lg"
-                  transition="200ms ease-in-out"
-                  d="flex"
-                >
-                  <Avatar
-                    size="sm"
-                    cursor="pointer"
-                    bg={chat.isGroupChat ? "#1d1931" : null}
-                    icon={
-                      chat.isGroupChat && (
-                        <IoMdPeople fontSize="1.5rem" color="#fff" />
-                      )
-                    }
-                    src={
-                      !chat.isGroupChat &&
-                      getSender(loggedUser.user, chat.users)?.image
-                    }
-                    name={
-                      !chat.isGroupChat &&
-                      getSender(loggedUser.user, chat.users).name
-                    }
-                    mr="4"
-                  />
-                  <Text fontSize="1.25rem">
-                    {!chat.isGroupChat
-                      ? getSender(loggedUser?.user, chat?.users)?.name
-                      : chat.chatName}
-                  </Text>
-                </Box>
-                <Divider />
-              </div>
-            ))}
-          </Stack>
+        <Stack overflowY="scroll">
+        {chats && chats.map((chat, index) => (
+          <div key={index}>
+            <Box
+              onClick={() => setSelectedChat(chat)}
+              cursor="pointer"
+              bg={selectedChat === chat ? "#1d1931" : "e8e8e8"}
+              color={selectedChat === chat ? "#fff" : "#000"}
+              px="3"
+              py="2"
+              borderRadius="lg"
+              transition="200ms ease-in-out"
+              d="flex"
+            >
+              <Avatar
+                size="sm"
+                cursor="pointer"
+                bg={chat.isGroupChat ? "#1d1931" : null}
+                icon={chat.isGroupChat && <IoMdPeople fontSize="1.5rem" color="#fff" />}
+                src={!chat.isGroupChat && getSender(loggedUser.user, chat.users)?.image}
+                name={!chat.isGroupChat && getSender(loggedUser.user, chat.users).name}
+                mr="4"
+              />
+              <Text fontSize="1.25rem">
+                {!chat.isGroupChat ? getSender(loggedUser?.user, chat?.users)?.name : chat.chatName}
+              </Text>
+            </Box>
+            <Divider />
+          </div>
+        ))}
+      </Stack>
+      
         ) : (
           <Loader />
         )}
